@@ -1,9 +1,10 @@
 The basic project use Beego Framework.
 
-+ Routers:
+Routers:
 - /article
 - /product
-+ Controllers:
+
+Controllers:
 - /controllers/<a href="controllers/dc_article.go">dc_article.go</a>
 - /controllers/<a href="controllers/dc_product.go">dc_product.go</a>
 
