@@ -6,9 +6,9 @@ import (
 )
 
 func init() {
-    beego.Router("/", &controllers.MainController{})
-    beego.Router("/article", &controllers.DcArticleController{})
-    beego.Router("/product", &controllers.DcProductController{})
+    //beego.Router("/", &controllers.MainController{})
+    //beego.Router("/article", &controllers.DcArticleController{})
+    //beego.Router("/product", &controllers.DcProductController{})
     /*
     ns := beego.NewNamespace("/vi",
 
@@ -26,4 +26,19 @@ func init() {
 	)
 	beego.AddNamespace(ns)
 	*/
+	ns := beego.NewNamespace("/api",
+
+		beego.NSNamespace("/article",
+			beego.NSInclude(
+				&controllers.DcArticleController{},
+			),
+		),
+
+		beego.NSNamespace("/product",
+			beego.NSInclude(
+				&controllers.DcProductController{},
+			),
+		),
+	)
+	beego.AddNamespace(ns)
 }

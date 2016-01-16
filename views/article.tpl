@@ -14,9 +14,6 @@
       Article content
     </div>
   </header>
-  
-  {{.json}}
-
-  
+  {{.items}}
 </body>
 </html>
